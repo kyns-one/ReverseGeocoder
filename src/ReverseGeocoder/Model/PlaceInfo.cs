@@ -66,8 +66,8 @@ namespace ReverseGeocoding.Model
             AlternateNames = fields.GetValue(PlaceInfoFields.AlternateNames);
             Latitude = double.Parse(fields.GetValue(PlaceInfoFields.Latitude), CultureInfo.InvariantCulture);
             Longitude = double.Parse(fields.GetValue(PlaceInfoFields.Longitude), CultureInfo.InvariantCulture);
+            FeatureClass = fields.GetValue(PlaceInfoFields.FeatureClass).ToFeatureClass();
             FeatureCode = fields.GetValue(PlaceInfoFields.FeatureCode);
-            FeatureClass = FeatureCode.ToFeatureClass();
             CountryCode = fields.GetValue(PlaceInfoFields.CountryCode);
             AltCountryCodes = fields.GetValue(PlaceInfoFields.AltCountryCodes);
             Admin1Code = fields.GetValue(PlaceInfoFields.Admin1Code);
